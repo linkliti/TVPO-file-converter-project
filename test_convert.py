@@ -48,3 +48,21 @@ def test_area_converter(value, original_unit, converted_unit, result):
 def test_volume_converter(value, original_unit, converted_unit, result):
     """Test volume conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
+
+@pytest.mark.parametrize('value,original_unit,converted_unit,result', [
+    (1, units[4][3], units[4][2], 1000),
+    (1, units[4][3], units[4][1], 1000000),
+    (1, units[4][3], units[4][0], 1000000000),
+])
+def test_pressure_converter(value, original_unit, converted_unit, result):
+    """Test pressure conversions."""
+    assert convert_unit(value, original_unit, converted_unit) == result
+
+@pytest.mark.parametrize('value,original_unit,converted_unit,result', [
+    (1, units[5][2], units[5][0], 1000000),
+    (1, units[5][1], units[5][0], 1000),
+    (1, units[5][0], units[5][1], 0.001),
+])
+def test_energy_converter(value, original_unit, converted_unit, result):
+    """Test energy conversions."""
+    assert convert_unit(value, original_unit, converted_unit) == result
