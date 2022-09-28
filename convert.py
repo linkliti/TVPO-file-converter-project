@@ -9,16 +9,22 @@ class unit:
 # UNIT DEFINITIONS
 # - - - - - - - - - - - - - - - - - -
 
-
 # TIME
 seconds = unit("time", "seconds", "s", 1)
 milliseconds = unit("time", "milliseconds", "ms", 0.001)
 minutes = unit("time", "minutes", "min", 60)
 hours = unit("time", "hours", "h", 3600)
 
-time_units = [seconds, milliseconds, minutes, hours]
+# LENGTH
+millimeter = unit("length", "millimeter", "mm", 1/1000)
+centimeter = unit("length", "centimeter", "cm", 1/100)
+meter = unit("length", "meter", "m", 1)
+kilometer = unit("length", "kilometer", "km", 1000)
 
-units = [time_units]
+time_units = [seconds, milliseconds, minutes, hours]
+length_units = [millimeter, centimeter, meter, kilometer]
+
+units = [time_units, length_units]
 
 
 def convert_unit(value, original_unit, converted_unit):
