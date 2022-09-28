@@ -30,3 +30,21 @@ def test_time_converter(value, original_unit, converted_unit, result):
 def test_length_converter(value, original_unit, converted_unit, result):
     """Test length conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
+
+@pytest.mark.parametrize('value,original_unit,converted_unit,result', [
+    (1, units[2][3], units[2][2], 1000000),
+    (1, units[2][3], units[2][1], 10000000000),
+    (1, units[2][2], units[2][1], 10000),
+])
+def test_area_converter(value, original_unit, converted_unit, result):
+    """Test area conversions."""
+    assert convert_unit(value, original_unit, converted_unit) == result
+
+@pytest.mark.parametrize('value,original_unit,converted_unit,result', [
+    (1, units[3][5], units[3][4], 1000000000),
+    (1, units[3][5], units[3][5], 1),
+    (1, units[3][4], units[3][2], 1000000),
+])
+def test_volume_converter(value, original_unit, converted_unit, result):
+    """Test volume conversions."""
+    assert convert_unit(value, original_unit, converted_unit) == result

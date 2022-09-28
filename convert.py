@@ -21,10 +21,29 @@ centimeter = unit("length", "centimeter", "cm", 1/100)
 meter = unit("length", "meter", "m", 1)
 kilometer = unit("length", "kilometer", "km", 1000)
 
+# AREA
+millimeters_squared = unit("area", "millimeters squared", "mm2", 1/1000000)
+centimeters_squared = unit("area", "centimeters squared", "cm2", 1/10000)
+meters_squared = unit("area", "meters squared", "m2", 1)
+kilometers_squared = unit("area", "kilometers squared", "km2", 1000000)
+
+
+# VOLUME
+millimeters_cubed = unit("volume", "millimeters cubed", "mm3", 1/1000000000)
+centimeters_cubed = unit("volume", "centimeters cubed", "cm3", 1/1000000)
+milliliter = unit("volume", "milliliter", "mL", 1/1000000)
+liter = unit("volume", "liter", "L", 1/1000)
+meters_cubed = unit("volume", "meters cubed", "m3", 1)
+kilometers_cubed = unit("volume", "kilometers cubed", "km3", 1000000000)
+
 time_units = [seconds, milliseconds, minutes, hours]
 length_units = [millimeter, centimeter, meter, kilometer]
+area_units = [millimeters_squared, centimeters_squared,
+              meters_squared, kilometers_squared]
+volume_units = [millimeters_cubed, centimeters_cubed,
+                milliliter, liter, meters_cubed, kilometers_cubed]
 
-units = [time_units, length_units]
+units = [time_units, length_units, area_units, volume_units]
 
 
 def convert_unit(value, original_unit, converted_unit):
