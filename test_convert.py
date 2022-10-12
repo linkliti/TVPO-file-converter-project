@@ -10,7 +10,8 @@ pressure_units  = [pascal, kilopascal, megapascal, gigapascal, bar, atm]
 energy_units    = [joule, kilojoule, megajoule]
 """
 import pytest
-from convert import convert_unit, units
+from convert import convert_unit
+from convert import UNITS as units
 
 
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
