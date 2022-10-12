@@ -22,6 +22,7 @@ def test_time_converter(value, original_unit, converted_unit, result):
     """Test time conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
 
+
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
     (1, units[1][3], units[1][2], 1000),
     (1, units[1][2], units[1][0], 1000),
@@ -30,6 +31,7 @@ def test_time_converter(value, original_unit, converted_unit, result):
 def test_length_converter(value, original_unit, converted_unit, result):
     """Test length conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
+
 
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
     (1, units[2][3], units[2][2], 1000000),
@@ -40,6 +42,7 @@ def test_area_converter(value, original_unit, converted_unit, result):
     """Test area conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
 
+
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
     (1, units[3][5], units[3][4], 1000000000),
     (1, units[3][5], units[3][5], 1),
@@ -49,6 +52,7 @@ def test_volume_converter(value, original_unit, converted_unit, result):
     """Test volume conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
 
+
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
     (1, units[4][3], units[4][2], 1000),
     (1, units[4][3], units[4][1], 1000000),
@@ -57,6 +61,7 @@ def test_volume_converter(value, original_unit, converted_unit, result):
 def test_pressure_converter(value, original_unit, converted_unit, result):
     """Test pressure conversions."""
     assert convert_unit(value, original_unit, converted_unit) == result
+
 
 @pytest.mark.parametrize('value,original_unit,converted_unit,result', [
     (1, units[5][2], units[5][0], 1000000),
